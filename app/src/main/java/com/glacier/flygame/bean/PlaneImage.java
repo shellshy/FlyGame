@@ -1,6 +1,8 @@
-package com.glacier.flygame;
+package com.glacier.flygame.bean;
 
 import android.graphics.Bitmap;
+
+import com.glacier.flygame.bean.GameImage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +19,14 @@ public class PlaneImage implements GameImage {
 
     public PlaneImage(Bitmap my, int w, int h) {
         this.my = my;
-        bitmap.add(Bitmap.createBitmap(my, 0, 0, my.getWidth(), my.getHeight()));
-        bitmap.add(Bitmap.createBitmap(my, 0, 0, my.getWidth(), my.getHeight()));
-        bitmap.add(Bitmap.createBitmap(my, 0, 0, my.getWidth(), my.getHeight()));
-        bitmap.add(Bitmap.createBitmap(my, 0, 0, my.getWidth(), my.getHeight()));
+        bitmap.add(Bitmap.createBitmap(my, 0, 0, my.getWidth() / 4, my.getHeight()));
+        bitmap.add(Bitmap.createBitmap(my, my.getWidth() / 4 * 1, 0, my.getWidth() / 4, my.getHeight()));
+        bitmap.add(Bitmap.createBitmap(my, my.getWidth() / 4 * 2, 0, my.getWidth() / 4, my.getHeight()));
+        bitmap.add(Bitmap.createBitmap(my, my.getWidth() / 4 * 3, 0, my.getWidth() / 4, my.getHeight()));
         this.w = w;
         this.h = h;
-        x = (w - my.getWidth()) / 2;
-        y = h - my.getHeight() - 100;
+        x = (w - my.getWidth() / 4) / 2;
+        y = h - my.getHeight() - 30;
 
     }
 
@@ -74,7 +76,7 @@ public class PlaneImage implements GameImage {
      */
     public boolean select(int ex, int ey) {
         if (x < ex && y < ey &&
-                x + my.getWidth() > ex &&
+                x + my.getWidth() / 4 > ex &&
                 y + my.getHeight() > ey){
             return true;
         }
@@ -83,7 +85,7 @@ public class PlaneImage implements GameImage {
 
     public int getWidth(){
         if(my!=null){
-            return my.getWidth();
+            return my.getWidth() / 4;
         }
         return 0;
     }

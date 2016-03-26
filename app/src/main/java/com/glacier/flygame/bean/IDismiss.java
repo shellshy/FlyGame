@@ -1,4 +1,4 @@
-package com.glacier.flygame;
+package com.glacier.flygame.bean;
 
 /**
  * Created by shellshy on 16/3/26.

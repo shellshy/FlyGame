@@ -1,21 +1,22 @@
-package com.glacier.flygame;
+package com.glacier.flygame.bean;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import com.glacier.flygame.view.GameView;
 
 /**
  * Created by shellshy on 16/3/26.
  */
-class BackgroundImage implements GameImage {
+public class BackgroundImage implements GameImage {
 
     private GameView gameView;
     private Bitmap bg;
     private Bitmap newBitmap = null;
     private int height = 0;
 
-    BackgroundImage(GameView gameView, Bitmap bitmap) {
+    public BackgroundImage(GameView gameView, Bitmap bitmap) {
         this.gameView = gameView;
         this.bg = bitmap;
         newBitmap = Bitmap.createBitmap(

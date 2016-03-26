@@ -1,12 +1,13 @@
-package com.glacier.flygame;
+package com.glacier.flygame.activity;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.SurfaceView;
 import android.view.Window;
+
+import com.glacier.flygame.view.GameView;
 
 public class MainActivity extends AppCompatActivity implements AlertDialog.OnClickListener{
 

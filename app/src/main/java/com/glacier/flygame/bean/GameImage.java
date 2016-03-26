@@ -1,4 +1,4 @@
-package com.glacier.flygame;
+package com.glacier.flygame.bean;
 
 import android.graphics.Bitmap;
 

@@ -1,6 +1,11 @@
 package com.glacier.flygame;
 
 import android.graphics.Bitmap;
+import android.util.Log;
+
+import com.glacier.flygame.bean.GameImage;
+import com.glacier.flygame.bean.IDismiss;
+import com.glacier.flygame.bean.PlaneImage;
 
 /**
  * Created by shellshy on 16/3/26.
